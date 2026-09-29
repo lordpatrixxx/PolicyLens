@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-29T02:23:58.266481+00:00",
+  "status": "passed",
+  "engine": {
+    "mode": "hybrid",
+    "model": "BAAI/bge-small-en-v1.5",
+    "note": null,
+    "generation": "Reviewed extractive answers; no generative LLM"
+  },
+  "source_sha256": "317a5d6e8ce1e72117132779462ec6276b7fd06758767b92a56d5da74b8b0d25",
+  "steps": [
+    "Loaded the hash-verified 29-page public policy.",
+    "All six reviewed excerpts occur on their cited source pages.",
+    "Four source-grounded questions routed to their expected pages with the actual retrieval engine.",
+    "Missing remaining cover withheld the estimate.",
+    "Adding cover enabled INR 38,000; reducing it to INR 20,000 recomputed potential cover to INR 19,000."
+  ],
+  "scenarios": [
+    {
+      "bill": "60000.00",
+      "covered": "38000.00",
+      "out_of_pocket": "22000.00",
+      "ledger": [
+        {
+          "label": "Above cataract per-eye limit",
+          "amount": "20000.00",
+          "page": 8
+        },
+        {
+          "label": "Above remaining available cover",
+          "amount": "0",
+          "page": null
+        },
+        {
+          "label": "5% co-payment on capped amount",
+          "amount": "2000.00",
+          "page": 20
+        }
+      ]
+    },
+    {
+      "bill": "60000.00",
+      "covered": "19000.00",
+      "out_of_pocket": "41000.00",
+      "ledger": [
+        {
+          "label": "Above cataract per-eye limit",
+          "amount": "20000.00",
+          "page": 8
+        },
+        {
+          "label": "Above remaining available cover",
+          "amount": "20000.00",
+          "page": null
+        },
+        {
+          "label": "5% co-payment on capped amount",
+          "amount": "1000.00",
+          "page": 20
+        }
+      ]
+    }
+  ]
+}
